@@ -1,4 +1,4 @@
-//Ameeer and jacob
+//Ameer and Jacob
 //code here
 //
 
