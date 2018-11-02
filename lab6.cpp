@@ -13,7 +13,12 @@
 using namespace std;
 
 int main{
+	struct qb {
+		str fname, lname;
+		int numWins; //starts a 0
+		int years[4]; //Most won by a QB in that span is 4
 
+	} ;
 
 
 
