@@ -12,14 +12,24 @@
 
 using namespace std;
 
+
+struct qb {
+        str fname, lname;
+        int numWins; //starts a 0
+ 	int years[4]; //Most won by a QB in that span is 4
+
+} ;
+
+
+
 int main{
-	struct qb {
+/*	struct qb {
 		str fname, lname;
 		int numWins; //starts a 0
 		int years[4]; //Most won by a QB in that span is 4
 
 	} ;
-
+*/
 
 
 
