@@ -8,29 +8,23 @@
 #include <fstream>
 
 using namespace std;
-
-
-
+//make the QB struct
 struct qb {
         string fname, lname;
         int numWins; //starts a 0
  	int years[4]; //Most won by a QB in that span is 4
-
+	qb *next;
+	qb *prev;
 } ;
-
-/*printmenu function that takes the users choice so that the choice may initialize the
-function needed*/
-void printmenu(){
-	int choice =0;
-	cout << "please enter a 1 to import the data to the list" << endl;
-	cout << "Please enter a 2 to delete all of the entries on the list and exit" << endl;
-	cout << "Please enter a 3 to search for a struct" << endl;
-	cout << "please enter a 4 to delete a specific entry" << endl;
-	cout << "Please  enter a 5 to exit" << endl;
-	cin >> choice; 
-	return choice;
-}
-
+//making pointer structs so that they may be connected and used in the list
+student *temp2=0;
+student *temp=0;
+student *HEAD=0;
+//prototyping functions
+void searcher();
+void deleteall();
+void addstruct();
+void removefunc();
 
 //delete all function that deletes all of the entries
 void deleteall(){
@@ -72,7 +66,6 @@ int main(){
 	cout <<"to delete all, enter 3!" << endl;
 	cout <<"to remover a struct, enter 4" <<endl;
 	cout <<"to exit,enter 0" << endl;
-
 	cin >> choice;
 	if(choice ==1){
     		addstruct();
