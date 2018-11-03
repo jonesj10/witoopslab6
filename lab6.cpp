@@ -68,21 +68,23 @@ void Searchfname(){
 		
 	}while(temp != HEAD);
 }
-
+void Searchfname(){
+// delete all
+}
 
 int main(){
 //activates the menu and returns the useres choice that is given to the computer
 	
-        string wordsearch1[19][3];
+        std::string qblist[19][3];
 	
         ifstream infile1("qblist.txt");
 
 
         for ( int i = 0; i<18; i++ ) {
                 for (int j=0; j<3; j++ ) {
-                        infile1 >> wordsearch2[i][j];
-                }//j WordSearch2
-        }//i WordSearch2
+                        infile1 >> qblist[i][j];
+                }//j
+        }//i
 	int choice; 
 	do{
 	cout <<"please enter what you want to do:" << endl;
