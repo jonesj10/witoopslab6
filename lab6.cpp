@@ -41,14 +41,14 @@ newentry-> years[4] = year[4];
 
 //sets the temp pointer to the next temp.
 if(HEAD ==NULL){
-        HEAD = newentry;
-        newentry->next=0;
+	HEAD = newentry;
+	newentry->next=0;
 }
 else{
-    for(temp =HEAD; temp !=0; temp=temp->next){}
-    temp = newentry;
-    newentry->next=HEAD;
-    HEAD = newentry;
+	for(temp =HEAD; temp !=0; temp=temp->next){}
+	temp = newentry;
+	newentry->next=HEAD;
+	HEAD = newentry;
 }
 cout <<"The struct was created!" <<endl;
 }//end of addstruct function
@@ -72,7 +72,7 @@ int main(){
         ifstream infile1("qblist.txt");
 
 
-        for ( int i = 0; i<18; i++ ) {
+        for ( int i = 0; i<17; i++ ) {
                 for (int j=0; j<3; j++ ) {
                         infile1 >> qblist[i][j];
                 }//j
@@ -90,13 +90,13 @@ int main(){
                 addstruct();
         }
         else if(choice ==2){
-                searcher();
+//                searcher();
         }
         else if(choice ==3){
                 deleteall();
         }
         else if (choice ==4){
-                removefunc();
+//                removefunc();
         }
         else
     return 0;
