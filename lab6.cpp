@@ -16,8 +16,6 @@ using namespace std;
 
 
 
-
-
 struct qb {
         str fname, lname;
         int numWins; //starts a 0
@@ -49,17 +47,20 @@ while(temp){
 
 
 void Searchfname(){
-	do
-
-	while(temp !0 HEAD)
+	do{
+		
+	}while(temp != HEAD);
 }
 
 
 int main{
-
+	
 	int choice =0;
-	printmenu();
-	cin >> choice;
+	while (choice != 5){
+		printmenu();
+		cin >> choice;
+// if statements go here
+	}//menu
 
 
 
