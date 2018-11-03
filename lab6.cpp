@@ -10,7 +10,7 @@
 using namespace std;
 //make the QB struct
 struct qb {
-        string fname, lname;
+        string firstname, lastname;
         int numWins; //starts a 0
  	int years[4]; //Most won by a QB in that span is 4
 	qb *next;
@@ -25,7 +25,35 @@ void searcher();
 void deleteall();
 void addstruct();
 void removefunc();
+//________________________________________________________________________________________
+void addstruct(){
+string fname, lname;
+int numWins;
+int years[4];
 
+
+
+//assign the variables to the new entry
+qb *newentry = new qb;
+newstudent-> firstname = fname;
+newstudent-> lastname =lname;
+newstudent-> grade = score;
+
+//sets the temp pointer to the next temp.
+if(HEAD ==NULL){
+        HEAD = newstudent;
+        newstudent->next=0;
+}
+else{
+    for(temp =HEAD; temp !=0; temp=temp->next){}
+    temp = newstudent;
+    newstudent->next=HEAD;
+    HEAD = newstudent;
+}
+cout <<"The struct was created!" <<endl;
+}//end of addstruct function
+
+//_________________________________________________________________________________________
 //delete all function that deletes all of the entries
 void deleteall(){
 	temp = HEAD;
@@ -35,8 +63,6 @@ void deleteall(){
         	delete deleted;//deletes the current
 	}
 }//end of delete all
-
-
 
 void Searchfname(){
 	do{
