@@ -21,12 +21,13 @@ qb *temp2=0;
 qb *temp=0;
 qb *HEAD=0;
 //prototyping functions
-//void searcher();
+void searcher();
 void deleteall();
 void addstruct();
-//void removefunc();
+void removefunc();
 
 //________________________________________________________________________________________
+
 void addstruct(){
 string fname, lname;
 int numwins;
@@ -70,12 +71,39 @@ void searcher(){
     string fname, lname;
     cout << "search by first and last name" << endl;
     cin >> fname;
-    cin >> lname;
+    cin >> lname;void removefunc(){
+string fname;
+cout << "what is the name of the struct you want to delete?" << endl;
+cin >> fname;
+//this loop searches through the whole list.
+for(temp = HEAD; temp!=NULL; temp=temp->next){
+    //removing the head
+    if(temp->firstname == fname){
+
+       temp = HEAD;
+       HEAD = HEAD->next;
+       delete temp;
+    }else if(temp->next->firstname == fname){
+    if(temp->next->next == 0){
+
+        delete temp->next;
+        temp->next =0;
+    }}
+    else if(temp->next->firstname == fname){
+    if(temp->next->next != 0){
+        temp2 = temp->next;
+        temp->next = temp->next->next;
+        delete temp2;
+    }}
+}//end of for loop
+}//end of remover function
+
 for (temp = HEAD; temp !=NULL; temp =temp->next)
     if(temp-> firstname == fname && temp-> lastname == lname)
             cout<<temp->grade;
 }
 //_________________________________________________________________________________________
+
 void removefunc(){
 string fname;
 cout << "what is the name of the struct you want to delete?" << endl;
@@ -104,6 +132,7 @@ for(temp = HEAD; temp!=NULL; temp=temp->next){
 }//end of remover function
 
 //________________________________________________________________________________________
+
 int main(){
 //activates the menu and returns the useres choice that is given to the computer
 
