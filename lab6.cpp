@@ -52,11 +52,10 @@ void Searchfname(){
 
 
 int main(){
-
 //activates the menu and returns the useres choice that is given to the computer
-
-        str wordsearch1[19][3];
-
+	
+        string wordsearch1[19][3];
+	
         ifstream infile1("qblist.txt");
 
 
@@ -65,12 +64,31 @@ int main(){
                         infile1 >> wordsearch2[i][j];
                 }//j WordSearch2
         }//i WordSearch2
+	int choice; 
+	do{
+	cout <<"please enter what you want to do:" << endl;
+	cout <<"if you want to add a struct, enter 1" << endl;
+	cout <<"if you want to search for a struct, enter 2" << endl;
+	cout <<"to delete all, enter 3!" << endl;
+	cout <<"to remover a struct, enter 4" <<endl;
+	cout <<"to exit,enter 0" << endl;
 
-        int choice =0;
-        while (choice != 5){
-                printmenu();
-                cin >> choice;
-// if statements go here
+	cin >> choice;
+	if(choice ==1){
+    		addstruct();
+	}
+	else if(choice ==2){
+    		searcher();
+	}
+	else if(choice ==3){
+    		Deleteall();
+	}
+	else if (choice ==4){
+    		removefunc();
+	}
+	else
+    return 0;
+	}while(choice !=0);
 
 
 
