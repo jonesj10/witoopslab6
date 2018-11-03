@@ -100,7 +100,7 @@ for(temp = HEAD; temp!=NULL; temp=temp->next){
 
 for (temp = HEAD; temp !=NULL; temp =temp->next)
     if(temp-> firstname == fname && temp-> lastname == lname)
-            cout<<temp->grade;
+            cout<<temp->firstname;
 }
 //_________________________________________________________________________________________
 
