@@ -28,16 +28,15 @@ void removefunc();
 //________________________________________________________________________________________
 void addstruct(){
 string fname, lname;
-int numWins;
-int years[4];
-
-
+int numwins;
+int year[4];
 
 //assign the variables to the new entry
 qb *newentry = new qb;
 newstudent-> firstname = fname;
 newstudent-> lastname =lname;
-newstudent-> grade = score;
+newstudent-> numWins = numwins;
+newstudent-> years[4] = year;
 
 //sets the temp pointer to the next temp.
 if(HEAD ==NULL){
