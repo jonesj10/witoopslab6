@@ -1,14 +1,9 @@
-<<<<<<< HEAD
+
 //Ameer and Jacob
-=======
-//Ameer and jacob
->>>>>>> ed2b30699bcd3d8a8de291dd4d3ab690cb09c739
-//code here
-//
+//lab 6
 
 #include <iostream>
 #include <string>
-#include <ctime>
 #include <ctime>
 #include <fstream>
 
@@ -17,13 +12,13 @@ using namespace std;
 
 
 struct qb {
-        str fname, lname;
+        string fname, lname;
         int numWins; //starts a 0
  	int years[4]; //Most won by a QB in that span is 4
 
 } ;
 
-/*printmenu function that takes the users choice so that the choice may initialize t$
+/*printmenu function that takes the users choice so that the choice may initialize the
 function needed*/
 void printmenu(){
 	int choice =0;
@@ -32,7 +27,11 @@ void printmenu(){
 	cout << "Please enter a 3 to search for a struct" << endl;
 	cout << "please enter a 4 to delete a specific entry" << endl;
 	cout << "Please  enter a 5 to exit"; << endl;
+	cin >> choice; 
+	return choice;
 }
+
+
 //delete all function that deletes all of the entries
 void deleteall(){
 temp = HEAD;
@@ -44,8 +43,6 @@ while(temp){
 
 
 
-
-
 void Searchfname(){
 	do{
 		
@@ -53,12 +50,14 @@ void Searchfname(){
 }
 
 
-int main{
-	
-	int choice =0;
-	while (choice != 5){
-		printmenu();
-		cin >> choice;
+int main(){
+
+//activates the menu and returns the useres choice that is given to the computer
+do{
+printmenu(); 
+}while(choice !=5);
+
+
 // if statements go here
 	}//menu
 
