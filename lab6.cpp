@@ -73,7 +73,7 @@ void searcher(){
     cin >> lname;
 for (temp = HEAD; temp !=NULL; temp =temp->next)
     if(temp-> firstname == fname && temp-> lastname == lname)
-            cout<<temp->grade;
+            cout<<temp->firstname;
 }
 //_________________________________________________________________________________________
 void removefunc(){
