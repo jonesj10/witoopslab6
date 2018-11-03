@@ -26,7 +26,7 @@ void printmenu(){
 	cout << "Please enter a 2 to delete all of the entries on the list and exit" << endl;
 	cout << "Please enter a 3 to search for a struct" << endl;
 	cout << "please enter a 4 to delete a specific entry" << endl;
-	cout << "Please  enter a 5 to exit"; << endl;
+	cout << "Please  enter a 5 to exit" << endl;
 	cin >> choice; 
 	return choice;
 }
@@ -34,11 +34,12 @@ void printmenu(){
 
 //delete all function that deletes all of the entries
 void deleteall(){
-temp = HEAD;
-while(temp){
-        student *deleted =temp; //save the current
-        temp = temp->next; //moves to the next pointer
-        delete deleted;//deletes the current
+	temp = HEAD;
+	while(temp){
+        	student *deleted =temp; //save the current
+        	temp = temp->next; //moves to the next pointer
+        	delete deleted;//deletes the current
+	}
 }//end of delete all
 
 
@@ -53,13 +54,23 @@ void Searchfname(){
 int main(){
 
 //activates the menu and returns the useres choice that is given to the computer
-do{
-printmenu(); 
-}while(choice !=5);
+
+        str wordsearch1[19][3];
+
+        ifstream infile1("qblist.txt");
 
 
+        for ( int i = 0; i<18; i++ ) {
+                for (int j=0; j<3; j++ ) {
+                        infile1 >> wordsearch2[i][j];
+                }//j WordSearch2
+        }//i WordSearch2
+
+        int choice =0;
+        while (choice != 5){
+                printmenu();
+                cin >> choice;
 // if statements go here
-	}//menu
 
 
 
