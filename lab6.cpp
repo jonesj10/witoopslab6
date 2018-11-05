@@ -59,7 +59,7 @@ cout <<"The struct was created!" <<endl;
 //delete all function that deletes all of the entries
 void deleteall(){
         temp = HEAD;
-        while(temp){
+        while(temp=HEAD){
                 qb *deleted =temp; //save the current
                 temp = temp->next; //moves to the next pointer
                 delete deleted;//deletes the current
