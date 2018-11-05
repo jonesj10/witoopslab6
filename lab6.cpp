@@ -71,14 +71,12 @@ void searcher(){
     string fname, lname;
     cout << "search by first and last name" << endl;
     cin >> fname;
-    cin >> lname;void removefunc(){
-string fname;
-cout << "what is the name of the struct you want to delete?" << endl;
-cin >> fname;
+    cin >> lname;
 //this loop searches through the whole list.
 for (temp = HEAD; temp !=NULL; temp =temp->next){
     if(temp-> firstname == fname && temp-> lastname == lname)
             cout<<temp->firstname;
+}
 }
 //_________________________________________________________________________________________
 
