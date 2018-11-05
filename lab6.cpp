@@ -76,29 +76,7 @@ string fname;
 cout << "what is the name of the struct you want to delete?" << endl;
 cin >> fname;
 //this loop searches through the whole list.
-for(temp = HEAD; temp!=NULL; temp=temp->next){
-    //removing the head
-    if(temp->firstname == fname){
-
-       temp = HEAD;
-       HEAD = HEAD->next;
-       delete temp;
-    }else if(temp->next->firstname == fname){
-    if(temp->next->next == 0){
-
-        delete temp->next;
-        temp->next =0;
-    }}
-    else if(temp->next->firstname == fname){
-    if(temp->next->next != 0){
-        temp2 = temp->next;
-        temp->next = temp->next->next;
-        delete temp2;
-    }}
-}//end of for loop
-}//end of remover function
-
-for (temp = HEAD; temp !=NULL; temp =temp->next)
+for (temp = HEAD; temp !=NULL; temp =temp->next){
     if(temp-> firstname == fname && temp-> lastname == lname)
             cout<<temp->firstname;
 }
