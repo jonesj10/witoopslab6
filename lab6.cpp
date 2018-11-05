@@ -45,13 +45,15 @@ if(HEAD ==NULL){
 	HEAD = newentry;
 	newentry->next=0;
 }
+
 else{
 	for(temp =HEAD; temp !=0; temp=temp->next){}
 	temp = newentry;
 	newentry->next=HEAD;
 	HEAD = newentry;
 }
-cout <<"The struct was created!" <<endl;
+
+cout <<"The struct was created successfully" <<endl;
 }//end of addstruct function
 
 //_________________________________________________________________________________________
@@ -69,7 +71,7 @@ void deleteall(){
 //function to search for an entry specifically
 void searcher(){
     string fname, lname;
-    cout << "search by first and last name" << endl;
+    cout << "search by first name,1" << endl <<"last name,2" <<endl <<"and year by 3"<<endl;
     cin >> fname;
     cin >> lname;
 //this loop searches through the whole list.
