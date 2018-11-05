@@ -28,16 +28,22 @@ void removefunc();
 
 //________________________________________________________________________________________
 
-void addstruct(){
-string fname, lname;
+void addstruct(string fname; string lname; string winyear){
+//string fname, lname;
 int numwins;
-int year[4];
+string year[4];
 
 //assign the variables to the new entry
 qb *newentry = new qb;
 newentry-> firstname = fname;
 newentry-> lastname =lname;
 newentry-> numWins = numwins;
+for (i = 0;i < 4;i++){
+	if (year[i]==0){
+		year[i]=winyear;
+	}
+
+}
 newentry-> years[4] = year[4];
 
 //sets the temp pointer to the next temp.
@@ -122,6 +128,9 @@ int main(){
                         infile1 >> qblist[i][j];
                 }//j
         }//i
+	for(int i = 0; i < 17; i++){
+		addstruct();
+	}
         int choice;
         do{
         cout <<"please enter what you want to do:" << endl;
