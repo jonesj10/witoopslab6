@@ -70,14 +70,29 @@ void deleteall(){
 //_________________________________________________________________________________________
 //function to search for an entry specifically
 void searcher(){
-    string fname, lname;
-    cout << "search by first name,1" << endl <<"last name,2" <<endl <<"and year by 3"<<endl;
-    cin >> fname;
-    cin >> lname;
+	string fname;
+	 int wins; 
+	int year[4];
+	int searchchoice =0;
+    cout << "search by first name,1" << endl <<"wins,2" <<endl <<"and year by 3"<<endl;
+	cin>>searchchoice;
+	if(searchchoice ==1){
+	cout <<"please enter the first name" <<endl;
+	cin>>fname; 
 //this loop searches through the whole list.
 for (temp = HEAD; temp !=NULL; temp =temp->next){
-    if(temp-> firstname == fname && temp-> lastname == lname)
-            cout<<temp->firstname;
+    if(temp-> firstname == fname)
+            cout<< temp->firstname;
+}
+	if(searchchoice ==2){
+	cout <<"please enter the amount of wins: " <<endl;
+	cin >> wins;
+	for(temp =HEAD; temp !=NULL;temp=temp->next){
+	if(temp->numWins == wins)
+	cout<< temp->numWins << temp->firstname <<endl;
+}
+}//end searchchoice 2
+
 }
 }
 //_________________________________________________________________________________________
