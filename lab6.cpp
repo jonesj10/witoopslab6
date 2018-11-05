@@ -28,7 +28,7 @@ void removefunc();
 
 //________________________________________________________________________________________
 
-void addstruct(string fname; string lname; string winyear){
+void addstruct(string fname, string lname, string winyear){
 //string fname, lname;
 int numwins;
 string year[4];
@@ -38,9 +38,10 @@ qb *newentry = new qb;
 newentry-> firstname = fname;
 newentry-> lastname =lname;
 newentry-> numWins = numwins;
-for (i = 0;i < 4;i++){
+for (int i = 0;i < 4;i++){
 	if (year[i]==0){
 		year[i]=winyear;
+		break;
 	}
 
 }
